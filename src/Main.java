@@ -1,33 +1,56 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import org.jasypt.util.text.*;
+import java.io.File;
 
 
 public class Main {
     public static void main(String[] args){
 
+        String pass;
+        String f_name;
         Scanner input = new Scanner(System.in);
+
+        ArrayList<String> writ = new ArrayList<String>();
 
         System.out.println("******************************************************\n");
         
         System.out.println("Hello welocome to the the file encrypter writer.\nPress enter to begin!");
-        System.out.println("If you would like to quit the program please type: No\n");
+        System.out.println("If you would like to gain access to a file, please enter: View\n");
+        System.out.println("If you would like to quit the program, please type: No\n");
 
         System.out.println("******************************************************\n");
         
 
         String choice = input.nextLine().toUpperCase();
 
-        if(choice.equals("NO")){
+        if(choice.toUpperCase().equals("NO")){
             System.out.println("Ok goodbye!");
             System.exit(0);
-        } else if(choice.equals("EDIT")){
-            System.exit(0);
+        } else if(choice.toUpperCase().equals("VIEW")){
+
+            System.out.println("Please enter the name of the file. Do not include file ending.\n");
+
+            f_name = input.nextLine()+".txt";
+
+            while(!new File("filepath"+f_name).isFile()){
+                System.out.print("Please try again with a different name.\n\n");
+                f_name = input.nextLine()+".txt";
+
+            }
+
+            System.out.print("File name is accepted.\n");
+
+            System.out.print("Pllease enter the password of the file you want to accesss.\n");
+            
+
+            pass = input.nextLine();
+
         }
 
         System.out.println("Please enter the name of the file.\n");
 
-        String f_name = input.nextLine()+".txt";
+        f_name = input.nextLine()+".txt";
 
         while (!Writer.create_file(f_name)){
             System.out.print("Please try again with a different name.\n\n");
@@ -40,7 +63,7 @@ public class Main {
         System.out.print("\nA password must have:\n Must contain at least eight characters\n" +
             " Must contain letters, digits, and a special character\n Must contain at lease a digit\n\n");
 
-        String pass = input.nextLine();
+        pass = input.nextLine();
         
         while (!Pass_create.password_checker(pass)) {
 
@@ -51,7 +74,6 @@ public class Main {
         }
         System.out.print("\nPasswword has been accepted\n\n");
 
-        ArrayList<String> writ = new ArrayList<String>();
 
         System.out.println("Next, please write into file:\nIf you would like to stop type: NO\n");
 
@@ -63,11 +85,10 @@ public class Main {
 
           String line = input.nextLine();
 
-          if (line.toUpperCase().equals("NO")){
+          if (line.toUpperCase().equals("DONE")){
             break;
           }
           writ.add(line);
-
         }
         
         for(String str: writ) {
@@ -77,11 +98,10 @@ public class Main {
 
         }
 
-
-        System.out.println("Thank you very much, your account");
+        System.out.println("Thank you very much, your file has been created and encrypted");
         
-
         input.close();
     }
     
 }
+
