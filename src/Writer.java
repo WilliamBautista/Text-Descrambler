@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.io.PrintWriter;  
 
 public class Writer{
 
@@ -40,6 +41,18 @@ public class Writer{
           }
     }
 
+    public static void empty(String file){
+      try{
+        PrintWriter wri = new PrintWriter(file);
+        wri.close();
+        }catch(Exception e){
+
+          System.out.println("An error occured");
+
+        }
+
+    }
+
     public static ArrayList<String> get_text (String file){
       ArrayList<String> writ = new ArrayList<String>();
       try {
@@ -57,24 +70,3 @@ public class Writer{
       return writ;
 
     }
-
-
-    public static void main(String[] args) {
-      
-
-
-        ArrayList<String> test = get_text("try.txt");
-
-        for(String str: test){
-          System.out.println(str);
-        }
-
-
-
-        
-  
-
-    }
-    
-
-}
