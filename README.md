@@ -1,6 +1,8 @@
-# Encrypting_fille_writer
+# Encrypting File Writer
 
-This was a project that I wanted create so I can to brush up my skills in Java and use some packages that I was interested in.
+This project was created as a way to add a extra layer of secuirty when accessing doucments such as .txt by encyrpting the file and all of its contents inside of it.
 
-# Functions
-1.
+## Functions
+*
+*
+*
