@@ -15,15 +15,4 @@ public class Encrypter{
           }
           return writ;
     }
-    public static ArrayList<String> en_list (ArrayList <String> list, String pass){
-        BasicTextEncryptor textEncryptor = new BasicTextEncryptor();
-        ArrayList<String> writ = new ArrayList<String>();
-
-        textEncryptor.setPassword(pass);
-
-        for(String str: list) {
-            String enText = textEncryptor.encrypt(str);
-            writ.add(enText);
-          }
-          return writ;
-    }
+}
