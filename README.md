@@ -1,6 +1,6 @@
-# encrypting_fille_writer
-A file writer that has the functions of a standard notepad plus encrypting capabilities
+# Encrypting_fille_writer
 
-# Jasypt download
+This was a project that I wanted to brush up my skills in Java.
 
-http://www.jasypt.org/download.html
+# Functions
+1.
