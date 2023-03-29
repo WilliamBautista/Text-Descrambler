@@ -4,11 +4,8 @@ This project was created as a way to add a extra layer of secuirty when accessin
 
 ## Functions
 * App has all the standard functions of a file editor except at the moment there is no GUI so all of it is done through command line/IDE at the moment
-
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
-* Jasypt has been added to add a second layer of securiy by enctrypting any and all text which can only be accessed by a password
-
-*
+* Currently can be used for .txt files only but will be improved upon
+* Jasypt has been added to add a second layer of securiy by encrypting any and all text by using a password
+* When attempting to view a text without the password, the text in the file will be repalced only be the encyrpted text and can only be accessed using the app
+* Jasypt uses the included Java Cryptography Extension to create a message digest of the text
+* The library uses the salt method and a iteration count of 1000 to encrypt the text
