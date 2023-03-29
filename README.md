@@ -5,5 +5,5 @@ This project was created as a way to add a extra layer of secuirty when accessin
 ## Functions
 * App has all the standard functions of a file editor except at the moment there is no GUI so all of it is done through command line/IDE at the moment
 * Jasypt has been added to add a second layer of securiy by enctrypting any and all text which can only be accessed by a password
--
+  -
 *
