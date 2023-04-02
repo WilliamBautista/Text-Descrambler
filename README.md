@@ -4,7 +4,6 @@ This project was created as a way to add a extra layer of secuirty when accessin
 
 ## Functions
 * App has all the standard functions of a file editor except at the moment there is no GUI so all of it is done through command line/IDE at the moment
-* Currently can be used for .txt files only but will be improved upon
 * Jasypt has been added to add a second layer of securiy by encrypting any and all text by using a password
 * When attempting to view a text without the password, the text in the file will be repalced only be the encyrpted text and can only be accessed using the app
 * Jasypt uses the included Java Cryptography Extension to create a message digest of the text
